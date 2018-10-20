@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Oct 20 08:33:46 2018
+Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Full Version
+Revision Name : MultUse
+Top-level Entity Name : MultUse
+Family : Cyclone IV E
+Total logic elements : 111
+    Total combinational functions : 55
+    Dedicated logic registers : 90
+Total registers : 90
+Total pins : 130
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 1
+Total PLLs : 1

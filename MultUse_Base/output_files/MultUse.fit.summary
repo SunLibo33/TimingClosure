@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Oct 20 07:35:22 2018
+Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Full Version
+Revision Name : MultUse
+Top-level Entity Name : MultUse
+Family : Cyclone IV E
+Device : EP4CE15F17C8
+Timing Models : Final
+Total logic elements : 40 / 15,408 ( < 1 % )
+    Total combinational functions : 34 / 15,408 ( < 1 % )
+    Dedicated logic registers : 8 / 15,408 ( < 1 % )
+Total registers : 24
+Total pins : 34 / 166 ( 20 % )
+Total virtual pins : 0
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 1 / 112 ( < 1 % )
+Total PLLs : 1 / 4 ( 25 % )

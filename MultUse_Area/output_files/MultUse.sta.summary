@@ -1,0 +1,137 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Clock_Virtual_Out_80M'
+Slack : 2.469
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 2.583
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 49.026
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.443
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.491
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock_Virtual_Out_80M'
+Slack : 4.571
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 35.076
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 6.129
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 5.829
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 24.677
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Ex_Clock'
+Slack : 24.954
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'Clock_Virtual_Out_80M'
+Slack : 2.882
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 2.999
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 49.123
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.392
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.462
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clock_Virtual_Out_80M'
+Slack : 4.285
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 35.431
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 5.728
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 5.839
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 24.681
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Ex_Clock'
+Slack : 24.953
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 5.657
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Clock_Virtual_Out_80M'
+Slack : 5.667
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 49.571
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.189
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clock_Virtual_Out_80M'
+Slack : 2.604
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 36.980
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.534
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 6.031
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Ex_Clock'
+Slack : 24.572
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MyPLL_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 24.783
+TNS   : 0.000
+
+------------------------------------------------------------
