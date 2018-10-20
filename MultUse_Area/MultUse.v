@@ -33,6 +33,27 @@ wire signed[15:0]  Result_Wire;
 
 reg[1:0]Channel_Count;
 
+reg signed[15:0] OR_Result;
+reg signed[15:0] OR_Result1;
+reg signed[15:0] OR_Result2;
+reg signed[15:0] OR_Result3;
+
+reg signed[15:0] CH0_Result;
+reg signed[15:0] CH1_Result;
+reg signed[15:0] CH2_Result;
+reg signed[15:0] CH3_Result;
+
+reg signed[15:0] Result_Reg0;
+reg signed[15:0] Result_Reg1;
+reg signed[15:0] Result1_Reg0;
+
+reg signed[15:0] Result_20M  ;
+reg signed[15:0] Result1_20M ;
+reg signed[15:0] Result2_20M ;
+reg signed[15:0] Result3_20M ;
+
+
+
 MyPLL	MyPLL_inst (
 	.inclk0 ( Ex_Clock   ),
 	.c0     ( Clock_20M  ),
@@ -111,27 +132,82 @@ always @(posedge Clock_80M)
 begin
   if(Rst_n==1'b0)
     begin
-	   Result<=16'h0000;
+	   OR_Result<=16'h0000;
+		OR_Result1<=16'h0000;
+		OR_Result2<=16'h0000;
+		OR_Result3<=16'h0000;
+	 end
+  else
+    begin
+	   case(Channel_Count)
+		  2'b00:OR_Result3<=Result_Wire;
+		  2'b01:OR_Result <=Result_Wire;
+		  2'b10:OR_Result1<=Result_Wire;
+		  2'b11:OR_Result2<=Result_Wire;	
+	     default:
+	       begin
+				OR_Result<=Result;
+				OR_Result1<=Result1;
+				OR_Result2<=Result2;
+				OR_Result3<=Result3;			 
+	       end		 
+		endcase
+	 end  
+end
+
+always @(posedge Clock_80M)
+begin
+  if(Rst_n==1'b0)
+    begin
+	   Result_Reg0<=16'h0000;
+		Result_Reg1<=16'h0000;
+		Result1_Reg0<=16'h0000;
+	 end
+  else
+    begin
+	   Result_Reg0<=OR_Result;
+		Result_Reg1<=Result_Reg0;
+		Result1_Reg0<=OR_Result1;
+	 end  
+end
+
+
+
+always @(posedge Clock_20M)
+begin
+  if(Rst_n==1'b0)
+    begin
+      Result_20M<=16'h0000;
+		Result1_20M<=16'h0000;
+		Result2_20M<=16'h0000;
+		Result3_20M<=16'h0000;
+	 end
+  else
+    begin
+      Result_20M<=Result_Reg1;
+		Result1_20M<=Result1_Reg0;
+		Result2_20M<=OR_Result2;
+		Result3_20M<=OR_Result3;
+	 end  
+end
+
+always @(posedge Clock_20M)
+begin
+  if(Rst_n==1'b0)
+    begin
+      Result <=16'h0000;
 		Result1<=16'h0000;
 		Result2<=16'h0000;
 		Result3<=16'h0000;
 	 end
   else
     begin
-	   case(Channel_Count)
-		  2'b00:Result3<=Result_Wire;
-		  2'b01:Result <=Result_Wire;
-		  2'b10:Result1<=Result_Wire;
-		  2'b11:Result2<=Result_Wire;	
-	     default:
-	       begin
-				Result<=Result;
-				Result1<=Result1;
-				Result2<=Result2;
-				Result3<=Result3;			 
-	       end		 
-		endcase
+      Result <=Result_20M ;
+		Result1<=Result1_20M;
+		Result2<=Result2_20M;
+		Result3<=Result3_20M;
 	 end  
 end
+
 
 endmodule 

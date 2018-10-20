@@ -18,6 +18,7 @@ create_generated_clock \
 [get_pins {MyPLL_inst|c1}]
 
 create_clock -name Clock_Virtual_In_20M -period 50
+create_clock -name Clock_Virtual_Out_20M -period 50
 
 create_clock -name Clock_Virtual_In_80M -period 12.5
 create_clock -name Clock_Virtual_Out_80M -period 12.5
@@ -58,12 +59,12 @@ set_input_delay -clock Clock_Virtual_In_20M \
 
 #create the output maximum delay for the data output from the
 #FPGA that accounts for all delays specified
-set_output_delay -clock Clock_Virtual_Out_80M \
+set_output_delay -clock Clock_Virtual_Out_20M \
 -max  3.4\
 [get_ports {Result[*]}]
 #create the output minimum delay for the data output from the
 #FPGA that accounts for all delays specified
-set_output_delay -clock Clock_Virtual_Out_80M \
+set_output_delay -clock Clock_Virtual_Out_20M \
 -min  1.0\
 [get_ports {Result[*]}]
 
@@ -86,11 +87,11 @@ set_input_delay -clock Clock_Virtual_In_80M \
 -min 1.0 \
 [get_ports {Mult_In_B1[*]}]
 
-set_output_delay -clock Clock_Virtual_Out_80M \
+set_output_delay -clock Clock_Virtual_Out_20M \
 -max  3.4\
 [get_ports {Result1[*]}]
 
-set_output_delay -clock Clock_Virtual_Out_80M \
+set_output_delay -clock Clock_Virtual_Out_20M \
 -min  1.0\
 [get_ports {Result1[*]}]
 
@@ -111,11 +112,11 @@ set_input_delay -clock Clock_Virtual_In_80M \
 -min 1.0 \
 [get_ports {Mult_In_B2[*]}]
 
-set_output_delay -clock Clock_Virtual_Out_80M \
+set_output_delay -clock Clock_Virtual_Out_20M \
 -max  3.4\
 [get_ports {Result2[*]}]
 
-set_output_delay -clock Clock_Virtual_Out_80M \
+set_output_delay -clock Clock_Virtual_Out_20M \
 -min  1.0\
 [get_ports {Result2[*]}]
 
@@ -136,10 +137,10 @@ set_input_delay -clock Clock_Virtual_In_80M \
 -min 1.0 \
 [get_ports {Mult_In_B3[*]}]
 
-set_output_delay -clock Clock_Virtual_Out_80M \
+set_output_delay -clock Clock_Virtual_Out_20M \
 -max  3.4\
 [get_ports {Result3[*]}]
 
-set_output_delay -clock Clock_Virtual_Out_80M \
+set_output_delay -clock Clock_Virtual_Out_20M \
 -min  1.0\
 [get_ports {Result3[*]}]
